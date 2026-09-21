@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H&amp;H Carpentry LLC | Baltimore, MD Carpentry Services</title>
+<meta name="description" content="H&H Carpentry LLC provides decks, fencing, trim carpentry, doors, windows, and repair services in Baltimore, MD and the surrounding area.">
+<style>
+  :root {
+    --wood-dark: #3e2b23;
+    --wood: #6b4a3a;
+    --wood-light: #a97c58;
+    --cream: #faf6f1;
+    --cream-alt: #f1e9df;
+    --green: #4d6b52;
+    --text: #2b2320;
+    --text-muted: #5c5049;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    border-bottom: 1px solid #e4d8c8;
+    z-index: 100;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--wood-dark);
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: var(--green); }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .nav-links a:hover { color: var(--green); }
+  .nav-cta {
+    background: var(--green);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--wood-dark);
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--wood-dark), var(--wood));
+    color: #fff;
+    padding: 90px 24px 100px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    color: #f1e9df;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .btn-primary {
+    background: var(--green);
+    color: #fff;
+  }
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--wood-dark);
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 auto 48px;
+  }
+
+  /* About */
+  .about {
+    background: var(--cream-alt);
+  }
+  .about-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about-content p { margin-bottom: 16px; color: var(--text-muted); font-size: 1.05rem; }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid #e4d8c8;
+    border-radius: 10px;
+    padding: 28px 24px;
+  }
+  .service-card h3 {
+    color: var(--wood-dark);
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+  }
+  .service-card ul {
+    list-style: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .service-card li {
+    padding: 4px 0;
+    border-top: 1px solid #f1e9df;
+  }
+  .service-card li:first-child { border-top: none; }
+
+  /* Gallery */
+  .gallery {
+    background: var(--cream-alt);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .gallery-placeholder {
+    aspect-ratio: 4 / 3;
+    background: repeating-linear-gradient(45deg, #e4d8c8, #e4d8c8 10px, #ede2d3 10px, #ede2d3 20px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wood);
+    font-weight: 600;
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #d8c9b3;
+  }
+
+  /* Contact */
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-info h3 {
+    color: var(--wood-dark);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .contact-item {
+    margin-bottom: 20px;
+  }
+  .contact-item strong {
+    display: block;
+    color: var(--wood-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+  }
+  .contact-item a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .contact-item a:hover { color: var(--green); }
+
+  form { display: flex; flex-direction: column; gap: 14px; }
+  form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--wood-dark);
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8c9b3;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fff;
+  }
+  form textarea { resize: vertical; min-height: 110px; }
+  form button {
+    background: var(--green);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  form button:hover { opacity: 0.92; }
+
+  /* Footer */
+  footer {
+    background: var(--wood-dark);
+    color: #d8c9b3;
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.9rem;
+  }
+  footer a { color: #fff; text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 720px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      padding: 20px 24px;
+      gap: 18px;
+      border-bottom: 1px solid #e4d8c8;
+    }
+    .nav-cta.open { display: block; margin: 0 24px 20px; text-align: center; }
+    .hero h1 { font-size: 2rem; }
+    .contact-wrap { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">H&amp;H <span>Carpentry</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta" id="navCta">Get a Quote</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Quality Carpentry for Baltimore, MD &amp; the Surrounding Area</h1>
+    <p>Decks, fencing, doors, windows, trim work, and repairs &mdash; built and installed with care by H&amp;H Carpentry LLC.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Request a Free Quote</a>
+      <a href="tel:4109774497" class="btn btn-secondary">Call 410-977-4497</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-content">
+    <h2 class="section-title">About H&amp;H Carpentry</h2>
+    <p>H&amp;H Carpentry LLC is a Baltimore-area carpentry business handling projects big and small &mdash; from a single repair to a full deck build. We work directly with homeowners to plan the job, give a clear quote, and get it done right.</p>
+    <p>Have a project in mind? Reach out and we'll walk through the details with you.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">A look at the categories of work we take on. Don't see your project listed &mdash; ask us anyway.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Outdoor Living</h3>
+        <ul>
+          <li>Decks</li>
+          <li>Pergolas</li>
+          <li>Fencing</li>
+          <li>Custom Gates</li>
+          <li>Awnings</li>
+          <li>Ramps</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Doors &amp; Windows</h3>
+        <ul>
+          <li>Door Installation</li>
+          <li>Window Installation</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Interior Finish Carpentry</h3>
+        <ul>
+          <li>Trim Carpentry</li>
+          <li>Crown Molding</li>
+          <li>Cabinet Installation</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Repairs &amp; Restoration</h3>
+        <ul>
+          <li>Dry Rot Repair</li>
+          <li>Shed Restoration</li>
+          <li>Stairs</li>
+          <li>Siding</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <h2 class="section-title">Our Work</h2>
+    <p class="section-sub">Project photos coming soon.</p>
+    <div class="gallery-grid">
+      <div class="gallery-placeholder">Photo coming soon</div>
+      <div class="gallery-placeholder">Photo coming soon</div>
+      <div class="gallery-placeholder">Photo coming soon</div>
+      <div class="gallery-placeholder">Photo coming soon</div>
+      <div class="gallery-placeholder">Photo coming soon</div>
+      <div class="gallery-placeholder">Photo coming soon</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">Call, email, or send a message below and we'll get back to you.</p>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <div class="contact-item">
+          <strong>Phone</strong>
+          <a href="tel:4109774497">410-977-4497</a>
+        </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:support@hhcarpentrymd.com">support@hhcarpentrymd.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Service Area</strong>
+          <span>Baltimore, MD and surrounding area</span>
+        </div>
+      </div>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 H&amp;H Carpentry LLC. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="tel:4109774497">410-977-4497</a> &nbsp;|&nbsp;
+    <a href="mailto:support@hhcarpentrymd.com">support@hhcarpentrymd.com</a>
+  </p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const navCta = document.getElementById('navCta');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navCta.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navCta.classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
