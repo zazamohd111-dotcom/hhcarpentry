@@ -191,6 +191,17 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
   }
+  .gallery-photo {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d8c9b3;
+  }
+  .gallery-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .gallery-placeholder {
     aspect-ratio: 4 / 3;
     background: repeating-linear-gradient(45deg, #e4d8c8, #e4d8c8 10px, #ede2d3 10px, #ede2d3 20px);
@@ -379,12 +390,12 @@
     <h2 class="section-title">Our Work</h2>
     <p class="section-sub">Project photos coming soon.</p>
     <div class="gallery-grid">
-      <div class="gallery-placeholder">Photo coming soon</div>
-      <div class="gallery-placeholder">Photo coming soon</div>
-      <div class="gallery-placeholder">Photo coming soon</div>
-      <div class="gallery-placeholder">Photo coming soon</div>
-      <div class="gallery-placeholder">Photo coming soon</div>
-      <div class="gallery-placeholder">Photo coming soon</div>
+      <div class="gallery-photo"><img src="photos/whitekithchen.jpg" alt="White custom kitchen cabinetry installation"></div>
+      <div class="gallery-photo"><img src="photos/blackkitchen.jpg" alt="Black kitchen cabinetry installation"></div>
+      <div class="gallery-photo"><img src="photos/cabinetbrown.jpg" alt="Brown cabinet installation"></div>
+      <div class="gallery-photo"><img src="photos/kitchenwhiteblack.jpg" alt="White and black two-tone kitchen cabinetry"></div>
+      <div class="gallery-photo"><img src="photos/whitebrown.jpg" alt="White and brown cabinet installation"></div>
+      <div class="gallery-placeholder">More photos coming soon</div>
     </div>
   </div>
 </section>
