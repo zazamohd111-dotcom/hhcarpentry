@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>H&amp;H Carpentry LLC | Baltimore, MD Carpentry Services</title>
-<meta name="description" content="H&H Carpentry LLC provides decks, fencing, trim carpentry, doors, windows, and repair services in Baltimore, MD and the surrounding area.">
+<meta name="description" content="H&H Carpentry LLC specializes in custom kitchen remodeling and interior finish carpentry in Baltimore, MD and the surrounding area.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,7 +35,7 @@
       "name": "Howard County, MD"
     }
   ],
-  "description": "H&H Carpentry provides custom cabinetry, interior finish carpentry, trim, doors, windows, decks, and home repairs across the Baltimore area.",
+  "description": "H&H Carpentry specializes in custom kitchen remodeling, custom cabinetry, and interior finish carpentry across the Baltimore area.",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [
@@ -228,6 +228,41 @@
   }
   .service-card li:first-child { border-top: none; }
 
+  .services-grid-featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .service-card-featured {
+    padding: 40px 32px;
+    border-top: 3px solid var(--green);
+    text-align: center;
+  }
+  .service-card-eyebrow {
+    display: inline-block;
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .service-card-featured h3 {
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+  }
+  .service-card-featured ul {
+    display: inline-block;
+    text-align: left;
+    font-size: 1rem;
+  }
+  .service-card-featured li {
+    padding: 6px 0;
+  }
+  @media (max-width: 640px) {
+    .services-grid-featured { grid-template-columns: 1fr; }
+  }
+
   /* Gallery */
   .gallery {
     background: var(--cream-alt);
@@ -376,8 +411,8 @@
 
 <section class="hero">
   <div class="container">
-    <h1>Quality Carpentry for Baltimore, MD &amp; the Surrounding Area</h1>
-    <p>Decks, fencing, doors, windows, trim work, and repairs &mdash; built and installed with care by H&amp;H Carpentry LLC.</p>
+    <h1>Custom Kitchen Remodeling &amp; Interior Finish Carpentry in Baltimore, MD</h1>
+    <p>From full kitchen renovations to refined trim work &mdash; built and installed with care by H&amp;H Carpentry LLC.</p>
     <div class="hero-buttons">
       <a href="#contact" class="btn btn-primary">Request a Free Quote</a>
       <a href="tel:14109774497" class="btn btn-secondary">Call (410) 977-4497</a>
@@ -388,7 +423,7 @@
 <section class="about" id="about">
   <div class="container about-content">
     <h2 class="section-title">About H&amp;H Carpentry</h2>
-    <p>H&amp;H Carpentry LLC is a Baltimore-area carpentry business handling projects big and small &mdash; from a single repair to a full deck build. We work directly with homeowners to plan the job, give a clear quote, and get it done right.</p>
+    <p>H&amp;H Carpentry LLC is a Baltimore-area carpentry business specializing in custom kitchen remodeling and interior finish carpentry. We work directly with homeowners to plan the job, give a clear quote, and get it done right.</p>
     <p>Have a project in mind? Reach out and we'll walk through the details with you.</p>
   </div>
 </section>
@@ -396,41 +431,23 @@
 <section class="services" id="services">
   <div class="container">
     <h2 class="section-title">Services</h2>
-    <p class="section-sub">A look at the categories of work we take on. Don't see your project listed &mdash; ask us anyway.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Outdoor Living</h3>
+    <p class="section-sub">Our focus is custom kitchens and refined interior carpentry &mdash; the work we know best. Have a different project in mind? Ask us anyway.</p>
+    <div class="services-grid services-grid-featured">
+      <div class="service-card service-card-featured">
+        <span class="service-card-eyebrow">Our Specialty</span>
+        <h3>Custom Kitchen Remodeling</h3>
         <ul>
-          <li>Decks</li>
-          <li>Pergolas</li>
-          <li>Fencing</li>
-          <li>Custom Gates</li>
-          <li>Awnings</li>
-          <li>Ramps</li>
+          <li>Custom Cabinetry</li>
+          <li>Kitchen Cabinet Installation</li>
+          <li>Full Kitchen Renovations</li>
         </ul>
       </div>
-      <div class="service-card">
-        <h3>Doors &amp; Windows</h3>
-        <ul>
-          <li>Door Installation</li>
-          <li>Window Installation</li>
-        </ul>
-      </div>
-      <div class="service-card">
+      <div class="service-card service-card-featured">
+        <span class="service-card-eyebrow">Our Specialty</span>
         <h3>Interior Finish Carpentry</h3>
         <ul>
           <li>Trim Carpentry</li>
           <li>Crown Molding</li>
-          <li>Cabinet Installation</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <h3>Repairs &amp; Restoration</h3>
-        <ul>
-          <li>Dry Rot Repair</li>
-          <li>Shed Restoration</li>
-          <li>Stairs</li>
-          <li>Siding</li>
         </ul>
       </div>
     </div>
