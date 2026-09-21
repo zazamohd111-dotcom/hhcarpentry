@@ -188,8 +188,14 @@
   }
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+  @media (max-width: 720px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
   }
   .gallery-photo {
     aspect-ratio: 4 / 3;
@@ -395,7 +401,7 @@
       <div class="gallery-photo"><img src="photos/cabinetbrown.jpg" alt="Brown cabinet installation"></div>
       <div class="gallery-photo"><img src="photos/kitchenwhiteblack.jpg" alt="White and black two-tone kitchen cabinetry"></div>
       <div class="gallery-photo"><img src="photos/whitebrown.jpg" alt="White and brown cabinet installation"></div>
-      <div class="gallery-placeholder">More photos coming soon</div>
+      <div class="gallery-photo"><img src="photos/nicekitchen.jpg" alt="Custom kitchen cabinetry installation"></div>
     </div>
   </div>
 </section>
